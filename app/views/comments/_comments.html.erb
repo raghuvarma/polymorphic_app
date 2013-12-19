@@ -1,0 +1,8 @@
+<div id="comments">
+	<p><b>Id: Comment</b></p>	
+	<% @comments.each do |comment| %>	
+	<div class="comment">
+		<p><b><%= comment.id %></b>: <%= comment.content %></p>	
+	</div>
+	<% end %>
+</div>

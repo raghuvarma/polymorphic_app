@@ -1,11 +1,21 @@
 PolymorphicApp::Application.routes.draw do
-  resources :articles
+  get "comments/index"
+
+  get "comments/new"
+
+  resources :articles do
+    resources :comments
+  end
 
 
-  resources :photos
+  resources :photos do
+    resources :comments
+  end
 
 
-  resources :events
+  resources :events do
+    resources :comments
+  end
 
 
   get "home/index"
